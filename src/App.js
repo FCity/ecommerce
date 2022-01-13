@@ -10,51 +10,51 @@ class App extends Component {
     items: [
       {
         id: 1,
-        name: "Floral Spring Dress",
-        image: 'https://cdn.shopify.com/s/files/1/0204/7208/products/186A7529_16edcadb-3066-4254-aef4-62710730834b.jpg?v=1577813259',
-        desc: "A beautiful floral spring dress to let you shine",
+        name: 'Black Vase',
+        image: 'https://cb2.scene7.com/is/image/CB2/VictoriaBlackVaseSHS21/$web_pdp_main_carousel_sm$/201006142100/victoria-black-vase.jpg',
+        desc: 'A black vase',
         price: 29.99,
         stock: 20
       },
       {
         id: 2,
-        name: "Summer Pumps",
-        image: 'https://ae01.alicdn.com/kf/Hd449d167bced4dbab08f83670709c2faM/Women-s-Summer-pumps-High-Heels-Fashion-Increased-Stiletto-High-Heel-Super-High-Heel-Sexy-women.jpg_640x640q70.jpg',
-        desc: "You'll make your friends so jealous with these",
-        price: 49.99,
-        stock: 100
+        name: 'Coffee Maker',
+        image: 'https://i5.walmartimages.com/asr/16f77040-27ab-4008-9852-59c900d7a7d9_1.c524f1d9c465e122596bf65f939c8d26.jpeg',
+        desc: '5-cup coffee maker',
+        price: 9.99,
+        stock: 50
       },
       {
         id: 3,
-        name: "Winter Coat",
-        image: 'https://contestimg.wish.com/api/webimage/5958c0a8fcb61c6e5830b34d-large.jpg?cache_buster=2eebfb7667e6a298b24ea5ae256d724c',
-        desc: "Stay warm and stylish with this thick-enough but light-enough winter coat",
-        price: 39.99,
-        stock: 30
-      },
-      {
-        id: 4,
-        name: "Wonder Woman Outfit",
-        image: 'https://i.ebayimg.com/images/g/NfoAAOSwxOleX~uy/s-l640.jpg',
-        desc: "Showcase that you're a strong woman like Wonder Woman",
-        price: 27.59,
-        stock: 90
-      },
-      {
-        id: 5,
-        name: 'Darna Outfit',
-        image: 'https://i.pinimg.com/originals/36/9c/8c/369c8c4c85c51f467b88d35f6dc879ca.jpg',
-        desc: "Be strong and sexy -- be woman -- like Darna",
-        price: 17.59,
+        name: 'Rug',
+        image: 'https://b3h2.scene7.com/is/image/BedBathandBeyond/21040593289229m?$529$&wid=529&hei=529',
+        desc: 'A very nice rug',
+        price: 599.99,
         stock: 10
       },
       {
+        id: 4,
+        name: 'Silverware Set',
+        image: 'https://m.media-amazon.com/images/I/71YP1-EuaPL._AC_SX466_.jpg',
+        desc: "50-piece silverware set",
+        price: 27.59,
+        stock: 25
+      },
+      {
+        id: 5,
+        name: 'Brown-Black Chair',
+        image: 'https://www.ikea.com/us/en/images/products/stefan-chair-brown-black__0727320_pe735593_s5.jpg?f=s',
+        desc: 'A sturdy chair',
+        price: 29.99,
+        stock: 15
+      },
+      {
         id: 6,
-        name: "Captain Marvel Outfit",
-        image: 'https://i5.walmartimages.com/asr/81df1c6f-ba4b-46e2-8b8b-ccb212288991_1.799274a0b3593c3cc2c383e184c0e318.jpeg',
-        desc: "A new breed of strong woman -- Captain Marvel",
-        price: 24.49,
-        stock: 20
+        name: 'Dark Brown Extendable Table',
+        image: 'https://www.ikea.com/us/en/images/products/ekedalen-extendable-table-dark-brown__0736963_pe740827_s5.jpg',
+        desc: 'An extendable table',
+        price: 199.99,
+        stock: 7
       }
     ],
     cart: []
@@ -77,7 +77,7 @@ class App extends Component {
 
     $('#alert').html(`<p>${item.name} added to cart</p><div id="close">x</div>`).fadeIn('slow', 'swing')
     setTimeout(() => {
-        $('#alert').fadeOut('slow', 'swing')
+      $('#alert').fadeOut('slow', 'swing')
     }, 3000)
   }
 
