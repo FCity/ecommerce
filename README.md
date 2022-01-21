@@ -36,4 +36,5 @@ Desktop
 Mobile
 
 ![Mobile view](./images/screenshot-mobile-1.jpg?raw=true)
+
 ![Mobile view](./images/screenshot-mobile-2.jpg?raw=true)
