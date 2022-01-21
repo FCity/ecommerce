@@ -26,3 +26,14 @@ I wanted to make something simple and practical with React. There's nothing much
 ## Acknowledgements
 
 I used product images from Ikea, Amazon, Walmart, Bed Bath & Beyond, and CB2.
+
+## Screenshots
+
+Desktop
+
+![Desktop view](./images/screenshot-desktop.jpg?raw=true)
+
+Mobile
+
+![Mobile view](./images/screenshot-mobile-1.jpg?raw=true)
+![Mobile view](./images/screenshot-mobile-2.jpg?raw=true)
