@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 
 class CartItem extends Component {
     render() {
-        const item = this.props.items.find(item => item.id === this.props.cartItem.id)
         const { id, quantity } = this.props.cartItem
+        const item = this.props.items.find(item => item.id === id)
         const { name, image, price } = item
+        
         return (
             <div className="cart-item">
                 <img
@@ -18,7 +19,7 @@ class CartItem extends Component {
                 <p>Subtotal: ${ price * quantity }</p>
                 <button
                     className="btn btn-item btn-item-del"
-                    onClick={this.props.delItem.bind(this, id)}>Remove</button>
+                    onClick={this.props.delItem.bind(this, id, name)}>Remove</button>
             </div>
         )
     }

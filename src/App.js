@@ -60,7 +60,7 @@ class App extends Component {
     cart: []
   }
 
-  addItem = (id, quantity) => {
+  addItem = (id, name, quantity) => {
     if (this.state.cart.some(item => item.id === id)) {
       this.setState({
         cart: this.state.cart.map(item => {
@@ -73,20 +73,17 @@ class App extends Component {
       this.setState({ cart: [...this.state.cart, cartItem] })
     }
 
-    const item = this.state.items.find(item => item.id === id)
-
-    $('#alert').html(`<p>${item.name} added to cart</p><div id="close">x</div>`).fadeIn('slow', 'swing')
+    $('#alert').html(`<p>${name} added to cart</p><div id="close">x</div>`).fadeIn('slow', 'swing')
     setTimeout(() => {
       $('#alert').fadeOut('slow', 'swing')
     }, 3000)
   }
 
-  delItem = id => {
+  delItem = (id, name) => {
     this.setState({ cart: this.state.cart.filter(item => item.id !== id)} )
 
-    const item = this.state.items.find(item => item.id === id)
-
-    $('#alert').html(`<p>${item.name} removed from cart</p><div id="close">x</div>`).fadeIn('slow', 'swing')
+    $('#alert').html(`<p>${name} removed from cart</p><div id="close">x</div>`).fadeIn('slow', 'swing')
+    
     setTimeout(() => {
       $('#alert').fadeOut('slow', 'swing')
     }, 3000)
@@ -97,6 +94,7 @@ class App extends Component {
 
     if (this.state.cart.length > 0) {
       $('#alert').html(`<p>Cart emptied</p><div id="close">x</div>`).fadeIn('slow', 'swing')
+      
       setTimeout(() => {
         $('#alert').fadeOut('slow', 'swing')
       }, 3000)
@@ -107,20 +105,24 @@ class App extends Component {
     return (
       <React.Fragment>
         <div id="alert"></div>
+
         <header>
           <h1 className="brand">React eCommerce</h1>
         </header>
+
         <nav>
           <button className="btn btn-cart" id="btn-cart-show">
             <i className="fa fa-shopping-cart"></i>
           </button>
         </nav>
+
         <div id="gallery">
           <Gallery
             items={this.state.items}
             addItem={this.addItem}
           />
         </div>
+
         <div id="cart">
           { this.state.cart.length > 0 &&
           <button
@@ -128,7 +130,9 @@ class App extends Component {
             id="btn-item-empty"
             onClick={this.emptyCart}>Empty Cart</button>
           }
+
           <button className="btn btn-cart" id="btn-cart-hide">X</button>
+          
           <Cart
             cart={this.state.cart}
             items={this.state.items}

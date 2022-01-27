@@ -2,22 +2,22 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class Item extends Component {
-    state = {
-        quantity: 1
-    }
+    state = { quantity: 1 }
 
-    onChange = e => {
-        this.setState({ quantity: e.target.value })
-    }
+    onChange = e => this.setState({ quantity: e.target.value })
 
     onSubmit = e => {
+        const { item, addItem } = this.props
+        const { quantity } = this.state
+
         e.preventDefault()
-        this.props.addItem(this.props.item.id, this.state.quantity)
+        addItem(item.id, item.name, quantity)
         this.setState({ quantity: 1 })
     }
 
     render() {
         const { name, image, desc, price, stock } = this.props.item
+
         return (
             <div className="item">
                 <img
@@ -29,6 +29,7 @@ class Item extends Component {
                         <h2>{ name }</h2>
                         <p>${ price }</p>
                     </div>
+                    
                     <div className="item-info">
                         <p>{ desc }</p>
                         <div>In stock: { stock }
