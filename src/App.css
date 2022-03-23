@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /* Custom */
 :root {
@@ -14,6 +15,12 @@
 }
 .body-lock {
   overflow: hidden;
+}
+.btn {
+  transition: color .25s ease-in-out;
+}
+.btn:hover {
+  color: pink
 }
 
 /* Alerts */
@@ -61,12 +68,13 @@ nav {
   font-size: 2rem;
   padding: 0 .5em;
 }
-.fa-shopping-cart:hover {
-  color: pink
-}
 #btn-cart-hide {
   padding: .1em .5em;
   float: right;
+}
+
+#gallery, #cart {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Cart */
@@ -117,6 +125,7 @@ nav {
 .item-title {
   display: grid;
   grid-template-columns: 70% 30%;
+  margin-left: -.5em;
 }
 .item-title p, .item-info p {
   font-size: 1.1rem;

@@ -107,7 +107,7 @@ class App extends Component {
         <div id="alert"></div>
 
         <header>
-          <h1 className="brand">React eCommerce</h1>
+          <h1 className="brand">eCommerce</h1>
         </header>
 
         <nav>
