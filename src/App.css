@@ -22,6 +22,9 @@
 .btn:hover {
   color: pink
 }
+#alert, #gallery, #cart {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 /* Alerts */
 #alert {
@@ -71,10 +74,6 @@ nav {
 #btn-cart-hide {
   padding: .1em .5em;
   float: right;
-}
-
-#gallery, #cart {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Cart */
